@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-y {
+  display: flex;
+  align-items: center;
+}
+
+.main-button {
+  padding: 10px;
+  border-radius: 8px;
+  transition-duration: 300ms;
+  background-color: oklch(62.3% 0.214 259.815);
+  cursor: pointer;
+  color: #fff;
+  transition-duration: 300ms;
+  &:hover {
+    background-color: oklch(48.8% 0.243 264.376);
+  }
+}
+
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+}
+
+.image-animation::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 20rem;
+  animation: outline 800ms linear infinite;
+  background-color: #42bccc;
+}
+
+@keyframes outline {
+  from {
+    transform: scale(1);
+    outline: 1;
+  }
+  to {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+.animate-opacity {
+  animation: opacity 800ms linear infinite alternate;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+.swiper-pagination {
+  position: static !important;
+  margin-top: 1rem;
+}
